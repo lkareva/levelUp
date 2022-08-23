@@ -1,0 +1,151 @@
+*
+    box-sizing: border-box
+    +r400
+    color: #fff
+    font-size: 18px
+    padding: 0
+    margin: 0
+    border: 0
+    @media screen and (max-width: 1014px)
+        font-size: 14px
+
+strong
+    font-weight: 700
+
+body
+    background: #230b30
+
+h1, h2, h3, h4, h5, h6 
+    margin: 0
+    font-weight: inherit
+    font-size: inherit
+
+ul li
+    list-style: none
+
+*:focus 
+    outline: -webkit-focus-ring-color auto 0px
+
+a
+    text-decoration: none
+    color: #FFF
+    cursor: pointer
+    transition: all 0.8s ease 0s 
+    &:hover
+        text-decoration: underline
+        
+*p
+    margin: 20px 0
+    font-size: 14px
+    line-height: 170%
+    strong
+        +r700
+    @media screen and (max-width: 1014px)
+        font-size: 12px
+        margin: 5px 0
+
+
+.container
+    max-width: 1224px
+    margin: 0 auto   
+    padding: 0 12px
+    overflow: hidden
+
+body > section
+    padding: 70px 0
+    @media screen and (max-width: 1014px)
+        padding: 40px 0
+
+
+//title 
+.tit
+    padding-bottom: 50px
+    &__title
+        +m700
+        font-size: 40px
+        line-height: 44px
+    &__subtitle
+        +m700
+        font-size: 16px
+        line-height: 20px
+    @media screen and (max-width: 1014px)
+        padding-bottom: 20px
+        &__title
+            font-size: 30px
+            line-height: 22px
+        &__subtitle
+            font-size: 14px
+            line-height: 17px   
+
+button,
+input,
+optgroup,
+select,
+textarea
+    padding: 0
+    margin: 0
+    border: none
+    border-radius: 0
+    box-shadow: none
+    background-color: transparent
+    font: inherit /* По дефолту, шрифтовые свойства, для этих элементов не наследуются */
+    color: inherit
+    letter-spacing: inherit
+
+
+button,
+input 
+    overflow: visible
+
+
+button,
+select 
+    text-align: left
+    text-transform: none
+
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] 
+    cursor: pointer
+    -webkit-appearance: none
+
+
+textarea 
+    resize: none
+    overflow-y: auto
+    overflow-x: hidden
+
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner 
+    border: none
+    padding: 0
+
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring 
+    outline: none
+
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button 
+    height: auto
+
+
+[type='search']::-webkit-search-decoration 
+    -webkit-appearance: none
+
+
+[type='search'] 
+    outline: none
+
+
+::-webkit-file-upload-button 
+    -webkit-appearance: button
+    font: inherit

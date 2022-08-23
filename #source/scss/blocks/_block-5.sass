@@ -1,0 +1,172 @@
+.block-5
+    background: linear-gradient(to bottom right, #300b41, #230b30)
+    .container 
+        overflow: visible
+    &__timer
+    &__box
+        padding-top: 40px 
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+    &__item 
+        flex: 0 1 50%
+        
+    &__wrap 
+        background: #421754
+        height: 100%
+    &__img 
+        height: 70%
+        text-align: center
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            max-width: 290px
+    &__price 
+        height: 30%
+    @media screen and (max-width: 1014px)
+        &__img 
+            height: 80%
+            img
+                max-width: 200px
+        &__price 
+            height: 20%
+    @media screen and (max-width: 620px)
+        &__box
+            display: block
+
+
+
+.price 
+    padding-top: 15px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__old 
+        text-decoration: line-through
+        width: 41%
+    &__new 
+        +m700
+        font-size: 50px
+        width: 41%
+        height: 55px
+        text-align: center
+        animation: price 2s linear infinite alternate
+
+@keyframes price 
+    0%
+        font-size: 50px
+        width: 50%
+    100%
+        font-size: 55px
+        width: 100%
+
+.form
+    display: flex
+    flex-direction: column
+    padding: 20px 40px
+    &__item
+        display: flex
+        flex-direction: column
+        position: relative
+    &__title
+        padding: 20px
+        text-align: center
+        +m700
+        font-size: 30px
+    &__label
+        position: absolute
+        top: 0
+        right: 0
+        font-size: 14px
+        text-align: end
+        color: #857d7d
+        transition: all 0.8s ease 0s
+        display: none
+    &__input
+        padding: 20px
+        margin: 20px 0
+        border: 2px solid #fff
+        transition: all 0.8s ease 0s
+        &.error
+            border: 2px solid #935c5c
+        &:focus
+            background: #5d4467
+        &:active
+            background: #5d4467
+
+            
+    &__button
+        padding: 20px
+        text-align: center
+        margin: 20px 0
+        border: 2px solid #fff
+        transition: all 0.8s ease 0s
+        &:hover
+            background: #fff
+            color: #230b30
+    @media screen and (max-width: 1014px)
+        &__title
+            font-size: 20px
+    @media screen and (max-width: 768px)
+        padding: 20px
+
+.timer
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    &__text
+        font-size: 30px
+        position: relative
+        padding-left: 90px
+        &::before
+            content: ''
+            background: url(/img/sale.svg) 100% 100%/cover no-repeat
+            width: 75px
+            height: 75px
+            position: absolute
+            top: 50%
+            margin-top: -37.5px
+            left: 0
+            z-index: 1
+    &__time
+        +m700
+        font-size: 40px
+
+@media screen and (max-width: 1014px)
+    .timer
+        &__text
+            font-size: 16px
+            padding-left: 65px
+            &::before
+                width: 50px
+                height: 50px
+                margin-top: -25px
+
+        &__time
+            font-size: 30px
+
+    .price 
+        &__old 
+            text-decoration: line-through
+            width: 41%
+        &__new 
+            +m700
+            font-size: 25px
+            width: 41%
+            height: 55px
+            text-align: center
+            animation: price1 2s linear infinite alternate
+
+
+
+
+
+@keyframes price1
+    0%
+        font-size: 25px
+        width: 100%
+    100%
+        font-size: 30px
+        width: 100%

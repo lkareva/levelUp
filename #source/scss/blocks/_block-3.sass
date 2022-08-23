@@ -1,0 +1,125 @@
+.block-3
+    background: linear-gradient(to bottom right, #190323, #230b30)
+    &__slider
+        display: flex
+        margin: -15px
+        justify-content: space-between
+    .slick-track 
+        display: flex
+    .slick-slide
+        height: auto  
+    &__slider-navigation
+        display: flex
+        padding-top: 30px
+
+    &__prev
+        width: 44px
+        height: 44px
+        margin-right: 61px
+        background: #421754
+        position: relative
+        cursor: pointer
+        transition: all 0.8s ease 0s
+        &:hover
+            background: #5d4467
+        &::before
+            content: ''
+            position: absolute
+            top: 15.5px
+            left: 15px
+            width: 0
+            height: 0
+            border-top: 6.5px solid transparent
+            border-right: 13px solid #FFFFFF
+            border-bottom: 6.5px solid transparent
+        
+    &__next	
+        width: 44px
+        height: 44px
+        background: #421754
+        position: relative
+        cursor: pointer
+        transition: all 0.8s ease 0s
+        &:hover
+            background: #5d4467
+        &::before
+            content: ''
+            position: absolute
+            top: 15.5px
+            left: 16px
+            width: 0
+            height: 0
+            border-top: 6.5px solid transparent
+            border-left: 13px solid #FFFFFF
+            border-bottom: 6.5px solid transparent
+
+.review
+    padding: 15px
+    width: 410px
+    display: flex !important
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__img
+        min-width: 100px
+        min-height: 100px
+        width: 100px
+        height: 100px
+        z-index: 2
+        border-radius: 50%
+        overflow: hidden
+        img
+            width: 120%
+            height: 120%
+            object-fit: cover
+    &__text
+        height: 100%
+        width: 100%
+        padding: 88px 45px
+        background: #421754
+        margin: -44px 0
+        font-size: 14px
+        line-height: 170%
+        text-align: center
+        color: #FFFFFF
+        position: relative
+        @media screen and (max-width: 1014px)
+            font-size: 12px
+    &__comment
+        z-index: 2
+        width: 70%
+        padding: 10px 0
+        background: #FFFFFF
+        box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.15)
+
+
+.comment
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    &__stars
+        display: flex
+    &__star
+        margin: 5px 5px 0 5px
+        width: 19px
+        height: 19px
+        background: url(/img/star.svg) center/cover no-repeat
+        &_active
+            background: url(/img/star_active.svg) center/cover no-repeat
+        @media screen and (max-width: 1014px)
+            width: 15px
+            height: 15px
+    &__name
+        +r700
+        font-size: 16px
+        line-height: 170%
+        color: #230b30
+        @media screen and (max-width: 1014px)
+            font-size: 14px
+    &__date
+        font-size: 14px
+        line-height: 170%
+        color: #230b30
+        @media screen and (max-width: 1014px)
+            font-size: 12px

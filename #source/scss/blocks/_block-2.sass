@@ -1,0 +1,88 @@
+.block-2 
+    background: linear-gradient(to bottom right, #1a0823, #451b57)
+    &__box 
+        display: flex
+        justify-content: space-between
+        margin: -10px
+    &__item 
+        flex: 0 1 33.333%
+        padding: 10px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &:first-child
+            .component
+                flex-direction: row-reverse
+                &__description 
+                    padding-right: 20px
+                    padding-left: 0
+        @media screen and (max-width: 1014px)
+            &:first-child
+                .component
+                    flex-direction: column
+                    &__description 
+                        padding: 0
+                        padding-top: 10px
+
+    &__component 
+    &__center
+        align-items: center
+        justify-content: center
+    &__img 
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            @media screen and (max-width: 768px)
+                max-width: 140px
+
+    &__btn
+    @media screen and (max-width: 604px)
+        &__box 
+            flex-direction: column
+        &__item 
+            &:first-child
+                flex-direction: row
+                .component
+                    flex: 0 1 33.333%
+            &:last-child
+                flex-direction: row
+                .component
+                    flex: 0 1 33.333%
+
+
+
+
+.component 
+    display: flex
+    align-items: center
+    padding: 15px
+    &__img 
+        overflow: hidden
+        border-radius: 50%
+        min-width: 100px
+        min-height: 100px
+        width: 100px
+        height: 100px
+        img
+            width: 100%
+            height: 100%
+            max-width: 290px
+            object-fit: cover
+
+    &__description 
+        padding-left: 20px
+        max-width: 200px
+    @media screen and (max-width: 1014px)
+        flex-direction: column
+        &__description 
+            padding: 0
+            padding-top: 10px
+            text-align: center
+    @media screen and (max-width: 604px)
+        padding: 5px
+        &__img 
+            min-width: 75px
+            min-height: 75px
+            width: 75px
+            height: 75px
